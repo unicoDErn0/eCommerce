@@ -1,7 +1,77 @@
-<!-- templates/registration_page.html -->
+<!DOCTYPE html>
+<html lang="en">
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            background-color: #f6e8ea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #f3d0d7;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #e91e63;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #d81b60;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e91e63;
+            border-radius: 5px;
+        }
+
+        label {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        p {
+            color: #888;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</body>
+
+</html>
+

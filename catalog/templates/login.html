@@ -1,44 +1,136 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'styles.css' %}">
- <!DOCTYPE html>
- <html lang="en">
- 
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Login Form</title>
- </head>
- 
- <body>
-   <section>
-     <div class="login-box">
-       <form action="">
-         <h2>Login</h2>
-         <div class="input-box">
-           <span class="icon"><ion-icon name="mail"></ion-icon> </span>
-           <input type="email" required>
-           <label> Email</label>
-         </div>
-         <div class="input-box">
-           <span class="icon"><ion-icon name="lock-closed"></ion-icon> </span>
-           <input type="password" required>
-           <label> Password</label>
-         </div>
-         <div class="remember-forget">
-           <label>
-             <input type="checkbox">Remember Me
-           </label>
-           <a href="#">Forget Password</a>
-         </div>
-         <button type="Submit">Login</button>
-         <div class="register-link">
-           <p>Don't have an account?
-             <a href="register/">Register</a>
-           </p>
-         </div>
-       </form>
-     </div>
-   </section>
-   <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <style>
+    /* Your CSS styles here */
+    body {
+      background-color: #f6e8ea;
+    }
+
+    .login-box {
+      max-width: 300px;
+      margin: auto;
+      border: 1px solid #f3d0d7;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e91e63;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #333;
+      border: none;
+      border-bottom: 1px solid #e91e63;
+      outline: none;
+      background: transparent;
+    }
+
+    .input-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #333;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #e91e63;
+      font-size: 12px;
+    }
+
+    .remember-forget {
+      margin-bottom: 30px;
+    }
+
+    .remember-forget label {
+      margin-right: 15px;
+    }
+
+    .remember-forget a {
+      color: #e91e63;
+      text-decoration: none;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+
+    .register-link {
+      text-align: center;
+      color: #888;
+      margin-top: 20px;
+    }
+
+    .register-link a {
+      color: #e91e63;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="login-box">
+      <form action="">
+        <h2>Login</h2>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon> </span>
+          <input type="email" required>
+          <label> Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon> </span>
+          <input type="password" required>
+          <label> Password</label>
+        </div>
+        <div class="remember-forget">
+          <label>
+            <input type="checkbox">Remember Me
+          </label>
+          <a href="#">Forget Password</a>
+        </div>
+        <button type="Submit">Login</button>
+        <div class="register-link">
+          <p>Don't have an account?
+            <a href="register/">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
- </body>
+</body>
+</html>
